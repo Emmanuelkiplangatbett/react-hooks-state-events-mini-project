@@ -1,10 +1,9 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import CategoryFilter from "./CategoryFilter";
 import NewTaskForm from "./NewTaskForm";
 import TaskList from "./TaskList";
 
 import { CATEGORIES, TASKS } from "../data";
-
 
 function App() {
   const [tasks, setTasks] = useState(TASKS);
@@ -24,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <h2>My tasks</h2>
-      <CategoryFilter 
+      <CategoryFilter
         categories={CATEGORIES}
         selectedCategory={category}
         onSelectCategory={setCategory}
@@ -38,7 +37,6 @@ function App() {
         />
         <TaskList onDeleteTask={handleDeleteTask} tasks={allTasks} />
       </div>
-      
     </div>
   );
 }
